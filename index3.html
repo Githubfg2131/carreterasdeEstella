@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carreteras de Estella BLOG</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    .miputonaranja {
+      background-color: #fb923c; /* necesario para definir en Boots. un color diferente al primario */}
+
+    .btn-primary{  background-color: #F74539;
+                   border-color: #F74539;
+                            }/* necesario para definir un boton personalizado. redefino el color primary con un color diferente  */ 
+
+    .btn-primary:hover {
+    background-color: #fb923c;
+    border-color: #fb923c;
+    }
+
+    .blog-header {
+      min-height: clamp(72px, 9vh, 100px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 7vw;
+    }
+
+    .blog-title {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .blog-home {
+      right: 7%;
+      transform: translateY(-50%);
+      text-decoration: none;
+      width: clamp(6px, 2vw, 36px);
+      height: clamp(6px, 2vw, 36px);
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-home:hover {
+      transform: translateY(-50%) scale(1.15);
+    }
+
+    .blog-home i {
+      font-size: clamp(3rem, 4.4vw, 5.4rem) !important;
+      line-height: 1;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .blog-header {
+        min-height: 70px;
+        padding: 0 62px 0 12px;
+        margin-bottom: 18px !important;
+      }
+
+      .blog-title {
+        font-size: clamp(1.2rem, 6.2vw, 1.75rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .blog-home {
+        right: 10px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .blog-home i {
+        font-size: 2.8 rem !important;
+      }
+
+      .container {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .card-custom {
+        border-radius: 12px;
+      }
+
+      .card-custom:hover {
+        transform: none;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      }
+
+      .card-custom img {
+        height: 165px;
+      }
+
+      .card-title {
+        font-size: 1.05rem;
+        line-height: 1.25;
+      }
+
+      .card-text {
+        font-size: 0.95rem;
+        line-height: 1.35;
+      }
+
+      .btn {
+        padding: 10px 12px;
+        font-size: 1rem;
+      }
+    }
+      
+
+    .card-custom {
+      transition: all 0.3s ease;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .card-custom:hover {
+      transform: translateY(-25px);
+      box-shadow: 0 30px 25px rgba(0,0,0,0.25);
+    }
+
+    .card-custom img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+      .card-custom {
+        border-radius: 12px;
+      }
+
+      .card-custom:hover {
+        transform: none;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      }
+
+      .card-custom img {
+        height: 165px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <section class="container-fluid miputonaranja text-white mb-4 position-relative blog-header">
+    
+
+    
+
+         <!-- Texto centrado -->
+      <h2 class="text-center mb-0 fw-bold w-100 blog-title">Carreteras de Estella  BLOG</h2>
+
+        <!-- Icono a la derecha -->
+    
+    <a href="index.html" class="position-absolute top-50 blog-home">
+  <i class="bi bi-house-fill fs-4 text-white"></i>
+</a>
+
+ 
+  </section>
+
+  <!-- GRID DE CARDS -->
+  <section class="container">
+    <div class="card-body d-flex flex-column">
+    <div class="row g-4">
+
+      <!-- GENERADOR DE 10 CARDS -->
+      <!-- Solo cambio random=1..10 para las imágenes -->
+      <!-- Card Template repetida + icono y botón -->
+      <!-- Columns responsivos: 1 / 2 / 3 / 4 por fila -->
+
+      <!-- CARD LOOP -->
+      <!-- Hago 10 cards manualmente -->
+
+      <!-- CARD 1 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=1" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-star-fill text-warning"></i> FERROVIAL en Nueva York</h5>
+            <p class="card-text">Ferrovial está ejecutando una de sus obras más ambiciosas, la de la nueva terminal uno del Aeropuerto John Fitgerald Kennedy de Nueva York</p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=2" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-heart-fill text-danger"></i> FCC, la cuarta</h5>
+            <p class="card-text">FCC cuarta empresa constructora española a nivel mundial según Global Powers of Construction de Deloitte </p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=3" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-lightning-fill text-warning"></i> Geopolymer solutions</h5>
+            <p class="card-text">Hormigón verde: descubra las ventajas del hormigón geopolímero sostenible </p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=4" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-geo-alt-fill text-danger"></i> MAPEI.Hormigón sin cemento y sostenible</h5>
+            <p class="card-text">Investigadores de la Universidad de Cartagena emplean geopolímeros procedentes de desechos industriales y urbanos</p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=5" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-moon-stars-fill text-info"></i> OHLA Premiado en Suecia</h5>
+            <p class="card-text">OHLA, de nuevo referente en infraestructuras: ENR premia su obra ferroviaria en Suecia</p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=6" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-camera-fill text-dark"></i> Ferrovial en el Nasdaq</h5>
+            <p class="card-text">Ferrovial logra su objetivo y desembarca en el índice Nasdaq 100 </p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=7" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-cart-fill text-success"></i> Sacyr construirá el Puente de Messina</h5>
+            <p class="card-text">Sacyr y mantendrá la licitación de 12.000 millones para la megaobra del Puente de Messina</p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=8" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-briefcase-fill text-warning"></i> SERVEO</h5>
+            <p class="card-text">Serveo consolida su posición entre las 100 mejores empresas para trabajar en España</p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=9" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-rocket-takeoff-fill text-danger"></i> Portobello Capital</h5>
+            <p class="card-text">Portobello impulsa el crecimiento de Serveo dará entrada a nuevos inversores</p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 10 -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card card-custom h-100">
+          <img src="https://picsum.photos/400/250?random=10" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="bi bi-gem text-info"></i> Sacyr</h5>
+            <p class="card-text">Sacyr cierra la venta a Actis de tres autopistas en Colombia por 1.350 millones de euros</p>
+            <a href="#" class="btn btn-primary w-100 mt-auto">Abrir</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+

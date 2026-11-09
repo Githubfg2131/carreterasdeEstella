@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel=" icon" type="image/png" href="jpg/spain.png">
+  <title>carreterasdeEstella</title>
+  <link rel="stylesheet" href="styles.css">
+  
+
+  <!-- script que impide la edición de la página con el boton derecho -->
+  <script>
+    document.addEventListener("contextmenu", function(event) {
+        event.preventDefault();
+        alert("CarreterasdeEstella: web protegida");
+    });
+
+    document.addEventListener("keydown", function(event) {
+        if (event.ctrlKey && (event.key === "u" || event.key === "U")) {
+            event.preventDefault();
+            alert("CarreterasdeEstella: web protegida");
+        }
+    });
+</script>
+</head>
+<body>
+  
+  <header>
+    <div class="izd">
+      <button class="side-menu-toggle" type="button" aria-label="Abrir menu lateral" aria-controls="sliderMenu" aria-expanded="false">
+        <img src="jpg/menu.png" alt="" class="menu-icon">
+        <span class="side-menu-bar"></span>
+        <span class="side-menu-bar"></span>
+        <span class="side-menu-bar"></span>
+      </button>
+      <a href="https://obraspublicas.navarra.es/es/" target="_blank" rel="noopener noreferrer" ><img src="jpg/navarra.png" alt="navarra" ></a>
+      <a href="https://www.estella-lizarra.com/" target="_blank" rel="noopener noreferrer"><img src="jpg/estella.png" alt="estella" ></a>
+    </div>
+    <div class="cent">
+      <h1>carreterasdeEstella</h1>
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menu principal">
+    <label for="nav-toggle" class="hamburger" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="der">
+      <ul>
+      <li><a href="index3.html">Our Blog</a></li>  
+      <li><a href="#">Mapas</a>
+          <ul class="menuvert">
+              <li><a href="index4.html">Distrito</a></li>
+              <li><a href="index5.html">Aglomerado</a></li>
+              <li><a href="index6.html">Puentes</a></li>
+              <li><a href="#">Límites</a></li>
+          </ul>
+      </li>
+      <li><a href="#">Normativa</a>
+         <ul class="menuvert">
+              <li><a href="#">Normat 1</a></li>
+              <li><a href="#">Normat 2</a></li>
+              <li><a href="#">Normat 3</a></li>
+              <li><a href="#">Normat 4</a></li>
+          </ul>
+      </li>
+      <li><a href="#">Invest I+D</a>
+        <ul class="menuvert">
+            <li><a href="#">Invest 1</a></li>
+            <li><a href="#">Invest 2</a></li>
+            <li><a href="#">Invest 3</a></li>
+            <li><a href="#">Invest 4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Estella</a></li>
+      <li class="mobile-only"><a href="index2.html">User Access</a></li>
+      
+    </ul>
+    </nav>
+    <div class="der2">
+
+        <div class="dr21">
+          <a href="index2.php">User Access</a>
+        </div>
+         
+        <div class="dr22">
+         <a href="index2.php"><img src="jpg/user.png"></a>
+        </div>
+    </div>
+  </header>
+
+  <div class="video-container">
+      <video id="background-video" muted playsinline preload="none"></video>
+  </div>
+  
+   <div class="apps-container"> 
+    <a href="https://op.v3.meteofocus.com/dashboard" target=”_blank”><img src="jpg/app1.jpg" class="app1" height="220" alt="app1"></a>
+    <a href="https://iot.skade.es/stations/resume?param_hash=Id-WP4ZIC2p7rOy--AA_BqEMIzQ" target=”_blank” ><img src="jpg/app2.jpg" class="app2" height="320" alt="app2"></a>
+  </div> 
+
+  <footer>
+  <div class="foot1">
+  </div>
+  
+    <div class="social-icons">
+      <a href="https://x.com" target=”_blank” ><img src="jpg/x.png"  alt="X"></a>
+      <a href="https://www.facebook.com"  target=”_blank”><img src="jpg/facebook.png" alt="Facebook"></a>
+      <a href="https://www.linkedin.com" target=”_blank”><img src="jpg/linkedin.png" alt="Linkedin"></a>
+      <a href="https://www.tiktok.com"  target=”_blank”><img src="jpg/tik-tok.png"  alt="TikTok"></a>
+      <a href="https://www.instagram.com"  target=”_blank”><img src="jpg/instagram.png"  alt="Instagram"></a>
+      <a href="https://www.whatsapp.com" target=”_blank”><img src="jpg/guas.png" alt="Whatsapp"></a>
+    </div>
+  
+  </footer>
+<!-- menu slider lateral izquierdo -->
+  <div class="slider-menu" id="sliderMenu">
+    <ul>
+      <li><a href="#">Herramientas</a></li>
+      <li><a href="#">Normativa</a></li>
+      <li><a href="#">Geodata</a></li>
+      <li><a href="#">Partners</a></li>
+      <li><a href="#">Tech i+d</a></li>
+    </ul>
+  </div>
+
+  <!-- comportamiento del banner de entrada-->
+  <!-- Fondo semitransparente -->
+  <div class="overlay"></div>
+
+  <!-- Banner-->
+  <div class="banner">
+    <img src="jpg/publi.png" alt="banner">
+  </div>
+
+  <script>
+    // Tarjeta DESPLAZABLE LATERAL Esperar 2 segundos tras la carga de la página
+    window.addEventListener("load", () => {
+      setTimeout(() => { 
+        const overlay = document.querySelector(".overlay");
+        const banner = document.querySelector(".banner");
+
+        // Mostrar y lanzar animaciones
+        overlay.style.display = "block";
+        banner.style.display = "flex";
+
+        overlay.style.animation = "overlayFade 8s ease-in-out forwards";
+        banner.style.animation = "slideFade 15s ease-in-out forwards";
+      // Ocultar todo al finalizar la animación
+      banner.addEventListener("animationend", () => {
+        banner.style.display = "none";
+        overlay.style.display = "none";
+      });
+
+      }, 2000); // 1000ms = 1 segundo
+    });
+  </script>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
